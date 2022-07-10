@@ -10,6 +10,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     display: inline-flex;
     position: relative;
+    width: 100%;
 }
 .tablinks {
   color: white;
@@ -55,7 +56,7 @@ body {
   width: 100%;
 }
 #LOAD_MAP img {
-  width: 100%;
+  width: 94%;
   margin-top: 15px;
 }
 .school {
@@ -63,6 +64,18 @@ body {
 }
 .myschool {
   position: relative;
+}
+.buton {
+  width: 20%;
+  height: 40%;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: rgb(120, 194, 255);
+  position: absolute;
+}
+.buton:hover {
+  background-color: rgb(56, 150, 227);
+  border: 2px solid lightgray;
 }
 h2 {
   font-size: 20px;
@@ -85,4 +98,29 @@ a:visited {
 a:hover {
   text-decoration-line: none;
   color: gray;
+}
+
+#skill {
+  display: flex;
+  align-items: center;
+}
+#pentagon {
+  position: relative;
+  width: 54px;
+  box-sizing: content-box;
+  border-width: 50px 18px 0;
+  border-style: solid;
+  border-color: pink transparent;
+  margin: auto;
+}
+#pentagon:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -85px;
+  left: -18px;
+  border-width: 0 45px 35px;
+  border-style: solid;
+  border-color: transparent transparent pink;
 }
