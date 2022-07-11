@@ -12,9 +12,6 @@
       <div><img src="image/my.png" alt="profile"></div>
         <button class="tablinks" onclick="openCity(event, 'INTRODUCE')">INTRODUCE</button>
         <button class="tablinks" onclick="openCity(event, 'LOAD_MAP')">LOAD MAP</button>
-        <button class="tablinks" onclick="openCity(event, 'SKILL')">SKILL</button>
-        <button class="tablinks" onclick="openCity(event, 'MBTI')">MBTI</button>
-        <button class="tablinks" onclick="openCity(event, 'HOBBY')">HOBBY</button>
       </div>
       
       <div id="INTRODUCE" class="tabcontent">
@@ -101,17 +98,23 @@
           </div>
         </div>
       </div>
-      <div id="SKILL" class="tabcontent">
-        <div id="pentagon"></div>
-      </div>
-
-      <div id="MBTI" class="tabcontent">
-        <h3>Tbjhb</h3>
-      </div>
-
-      <div id="HOBBY" class="tabcontent">
-        <h3>Tjj</h3>
-      </div>
-      <script src="./JavaScript.js"></script>
+      <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+        
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+        
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+        
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+      </script> 
   </body>
 </html>
